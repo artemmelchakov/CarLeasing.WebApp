@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  carleasing.webapp:
+    image: ${DOCKER_REGISTRY-}carleasingwebapp
+    build:
+      context: .
+      dockerfile: CarLeasing.WebApp/Dockerfile
+    ports:
+      - "7122:8081"
+    depends_on:
+      - db
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: 'MyStrongPassword1!'
+    ports:
+      - "1433:1433"
+    volumes:
+      - carleasingdb-volume:/var/lib/mssql/data
+
+volumes:
+  carleasingdb-volume:

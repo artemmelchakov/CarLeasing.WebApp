@@ -3,6 +3,56 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="popular-providers m-3" style="display: none">
+        <h6 class="display-4">Популярные поставщики</h6>
+        <table class="table">
+            <thead>
+                <tr class="tr__header">
+                    <th scope="col">Наименование</th>
+                    <th scope="col">Количество офферов</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="m-3 mt-5">
+        <div class="m-3">
+            <h6 class="display-4">Офферы</h6>
+        </div>
+        <div class="find-bar m-3">
+            <form class="find-bar__form">
+                <div class="row">
+                    <div class="col-10">
+                        <input class="find-bar__search-input form-control" type="text" name="search" placeholder="Поиск" />
+                    </div>
+                    <div class="col-2">
+                        <button class="find-bar__submit-button btn btn-primary" type="button">Найти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="offers m-3" style="display: none">
+
+            <div>
+                <label>Количество найденных офферов:</label>
+                <span class="offers-count">0</span>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr class="tr__header">
+                            <th scope="col">Марка</th>
+                            <th scope="col">Модель</th>
+                            <th scope="col">Наименование поставщика</th>
+                            <th scope="col">Дата регистрации</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+@section Scripts {
+    <script type="module" src="~/js/home/home.js" asp-append-version="true"></script>
+}

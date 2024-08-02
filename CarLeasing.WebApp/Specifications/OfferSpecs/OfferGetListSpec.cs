@@ -14,7 +14,7 @@ namespace CarLeasing.WebApp.Specifications.OfferSpecs;
 /// </summary>
 public class OfferGetListSpec : ISpecification<Offer, OfferGetListResponseDtoOffer>
 {
-    private readonly string _search;
+    private readonly string? _search;
     private readonly IMapper _mapper;
 
     /// <summary>
@@ -22,7 +22,7 @@ public class OfferGetListSpec : ISpecification<Offer, OfferGetListResponseDtoOff
     /// </summary>
     /// <param name="search"> Строка поиска, по которой производится фильтрафия. </param>
     /// <param name="mapper"> Объект маппера. </param>
-    public OfferGetListSpec(string search, IMapper mapper)
+    public OfferGetListSpec(string? search, IMapper mapper)
     {
         _search = search;
         _mapper = mapper;
@@ -32,7 +32,7 @@ public class OfferGetListSpec : ISpecification<Offer, OfferGetListResponseDtoOff
             ? entities.Include(e => e.Provider).Select(e => _mapper.Map<OfferGetListResponseDtoOffer>(e)).AsNoTracking()
             : entities
                 .Include(e => e.Provider)
-                .Where(e => e.Brand.Contains(_search) || e.Model.Contains(_search) || e.Provider.Name.Contains(_search))
+                .Where(e => e.Brand.Contains(_search!) || e.Model.Contains(_search!) || e.Provider.Name.Contains(_search!))
                 .Select(e => _mapper.Map<OfferGetListResponseDtoOffer>(e))
                 .AsNoTracking();
 }

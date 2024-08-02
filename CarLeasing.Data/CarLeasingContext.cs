@@ -51,25 +51,25 @@ public class CarLeasingContext : DbContext
             };
             var offers = new Offer[]
             {
-            new() { Brand = "Ауди", Model = "Модель 1", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Ауди", Model = "Модель 2", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Рено", Model = "Модель 3", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Ауди", Model = "Модель 1", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Ауди", Model = "Модель 2", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Рено", Model = "Модель 3", Provider = providers[0], RegistrationDate = DateTime.UtcNow },
 
-            new() { Brand = "Рено", Model = "Модель 4", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Рено", Model = "Модель 5", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Рено", Model = "Модель 1", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Рено", Model = "Модель 4", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Рено", Model = "Модель 5", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Рено", Model = "Модель 1", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Камаз", Model = "Модель 3", Provider = providers[1], RegistrationDate = DateTime.UtcNow },
 
-            new() { Brand = "Камаз", Model = "Модель 3", Provider = providers[2], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Камаз", Model = "Модель 4", Provider = providers[2], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Камаз", Model = "Модель 5", Provider = providers[2], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Камаз", Model = "Модель 4", Provider = providers[2], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Камаз", Model = "Модель 5", Provider = providers[2], RegistrationDate = DateTime.UtcNow },
 
-            new() { Brand = "Камаз", Model = "Модель 3", Provider = providers[3], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Фиат", Model = "Модель 41", Provider = providers[3], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Фиат", Model = "Модель 51", Provider = providers[3], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Камаз", Model = "Модель 3", Provider = providers[3], RegistrationDate = DateTime.UtcNow },
 
-            new() { Brand = "Фиат", Model = "Модель 61", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Ауди", Model = "Модель 911", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
-            new() { Brand = "Ауди", Model = "Модель 91", Provider = providers[4], RegistrationDate = DateTime.UtcNow }
+                new() { Brand = "Фиат", Model = "Модель 41", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Фиат", Model = "Модель 51", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Фиат", Model = "Модель 61", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Ауди", Model = "Модель 911", Provider = providers[4], RegistrationDate = DateTime.UtcNow },
+                new() { Brand = "Ауди", Model = "Модель 91", Provider = providers[4], RegistrationDate = DateTime.UtcNow }
             };
 
             Providers.AddRange(providers);

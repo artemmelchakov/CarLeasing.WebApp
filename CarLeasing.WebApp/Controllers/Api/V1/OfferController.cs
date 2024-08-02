@@ -44,7 +44,7 @@ public class OfferController : ControllerBase
     /// <param name="search"> Значение строки поиска. </param>
     /// <returns> <see cref="OfferGetListResponseDto"/> </returns>
     [HttpGet("list")]
-    public async Task<OfferGetListResponseDto> GetListAsync(string search)
+    public async Task<OfferGetListResponseDto> GetListAsync(string? search)
     {
         var offers = await _repository.Find(new OfferGetListSpec(search, _mapper)).ToArrayAsync();
         return new OfferGetListResponseDto { Count = offers.Length, Offers = offers };
